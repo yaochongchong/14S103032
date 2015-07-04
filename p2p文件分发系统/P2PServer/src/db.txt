@@ -1,0 +1,20 @@
+//创建数据库p2pserver
+CREATE DATABASE `p2pserver` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+//创建表user
+CREATE TABLE `user` (
+  `userid` int(5) NOT NULL,
+  `nickname` varchar(32) NOT NULL,
+  `pwd` varchar(32) NOT NULL,
+  `state` int(1) NOT NULL DEFAULT '0',
+  `usersex` int(1) NOT NULL DEFAULT '-1',
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//创建表friendship
+CREATE TABLE `friendship` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(5) NOT NULL,
+  `fid` int(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
